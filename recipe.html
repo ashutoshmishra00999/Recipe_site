@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Pasta Recipe</title>
+    <link rel="stylesheet" href="/website/recipe.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Delicious Pasta Recipe</h1>
+        <img style="height: 9rem; float: left; top: -5rem; position: relative;" src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.jpg?w=2000&t=st=1693136042~exp=1693136642~hmac=2579ad24491b5749d1b782580e9dfbe65434f36232ea416c4294302c927e1bd8" alt="Delicious Pasta">
+    </header>
+
+    <section class="recipe-details">
+        <div class="details">
+            <p>Cooking Time: 30 minutes</p>
+            <p>Difficulty: Easy</p>
+        </div>
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>200g pasta</li>
+                <li>2 cups tomato sauce</li>
+                <li>1/2 cup grated cheese</li>
+                <!-- Add more ingredients here -->
+            </ul>
+        </div>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Boil the pasta until al dente.</li>
+                <li>Heat the tomato sauce in a pan.</li>
+                <li>Mix the cooked pasta with the sauce.</li>
+                <!-- Add more instructions here -->
+            </ol>
+        </div>
+    </section>
+
+    <section class="ratings-reviews">
+        <h2>Ratings & Reviews</h2>
+        <form id="review-form" class="review-form">
+            <h2>Write a Review</h2>
+            <div class="rating">
+                <p>Rate this recipe:</p>
+                <div class="stars">
+                    <span class="star" data-rating="1">&#9733;</span>
+                    <span class="star" data-rating="2">&#9733;</span>
+                    <span class="star" data-rating="3">&#9733;</span>
+                    <span class="star" data-rating="4">&#9733;</span>
+                    <span class="star" data-rating="5">&#9733;</span>
+                </div>
+    
+            <textarea id="user-review-input" placeholder="Write your review here"></textarea>
+            <button id="submit-review-button" type="button">Submit Review</button>
+        </form>
+        
+        <div class="other-reviews">
+            <h3>Other Reviews:</h3>
+            <div class="review">
+                <p>Rating: 4/5</p>
+                <p>Delicious and easy to make!</p>
+            </div>
+            <!-- Add more reviews here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Recipe Sharing Platform</p>
+    </footer>
+
+    <!-- Add this script tag to your HTML file -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const writeReviewButton = document.getElementById("write-review-button");
+        const reviewForm = document.getElementById("review-form");
+
+        writeReviewButton.addEventListener("click", function () {
+            reviewForm.classList.toggle("visible");
+        });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const reviewForm = document.getElementById("review-form");
+        const reviewTextarea = document.getElementById("review-text");
+        const submitReviewButton = document.getElementById("submit-review");
+
+        submitReviewButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            const userReview = reviewTextarea.value.trim();
+            if (userReview !== "") {
+                addReview(userReview);
+                reviewTextarea.value = "";
+            }
+        });
+
+        function addReview(review) {
+            const reviewContainer = document.getElementById("other-reviews");
+            const reviewDiv = document.createElement("div");
+            reviewDiv.classList.add("review");
+            reviewDiv.innerHTML = `
+                <p>${review}</p>
+            `;
+            reviewContainer.appendChild(reviewDiv);
+        }
+    });
+</script>
+
+</body>
+</html>

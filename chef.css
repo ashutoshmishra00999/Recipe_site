@@ -1,0 +1,86 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+}
+
+/* Chat Container */
+.chat-container {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.chat-messages {
+    max-height: calc(100vh - 180px); /* Adjust as needed */
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 60px; /* Adjust to leave space for the fixed input */
+}
+
+.chat-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#message-input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+}
+
+#send-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Top Chefs Section */
+.top-chefs-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.chef {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+}
+#end-chat-button{
+position: absolute;
+left: 84%;
+width: 5rem;
+height: 2rem;
+background-color: red;
+color: white;
+top: 4rem;}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

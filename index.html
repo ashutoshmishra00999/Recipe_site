@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="/website/styles.css"> <!-- Include your CSS file here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Recipe Sharing Platform</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for recipes...">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="#">All Recipes</a></li>
+            <li><a href="#">Breakfast</a></li>
+            <li><a href="#">Lunch</a></li>
+            <li><a href="#">Dinner</a></li>
+            <!-- Add more category links here -->
+        </ul>
+    </nav>
+    <section class="featured-recipes">
+        <h2>Featured Recipes</h2>
+        <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.jpg?w=2000&t=st=1693132491~exp=1693133091~hmac=a6cd6fd4d44217c8fde709f8c421a39e1d47b42e6d989eb83e5430bf64c74c1f" class="d-block w-100" alt="pasta">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img.freepik.com/free-photo/high-angle-japanese-dumplings-composition_23-2148809869.jpg?w=2000&t=st=1693132554~exp=1693133154~hmac=2a21bc973098df6a9543e45807d0b52d1d4ff83137b0dccfe9ae58c9c099326f" class="d-block w-100" alt="momos">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=2000&t=st=1693132599~exp=1693133199~hmac=a33006660be529f7e7811b54a33b67a2d81c84e07db599e0c2c193a7d0a8de81" class="d-block w-100" alt="pizza">
+              </div>
+            </div>
+          </div> -->
+
+          <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img style="height: 27rem;" src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.jpg?w=2000&t=st=1693132491~exp=1693133091~hmac=a6cd6fd4d44217c8fde709f8c421a39e1d47b42e6d989eb83e5430bf64c74c1f" class="d-block w-100" alt="pasta">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Pasta</h5>
+                    <a href="/website/recipe.html"><button>Recipe</button></a>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img style="height: 27rem;" src="https://img.freepik.com/free-photo/high-angle-japanese-dumplings-composition_23-2148809869.jpg?w=2000&t=st=1693132554~exp=1693133154~hmac=2a21bc973098df6a9543e45807d0b52d1d4ff83137b0dccfe9ae58c9c099326f" class="d-block w-100" alt="momos">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Momos</h5>
+                    <a href="/website/recipe.html"><button>Recipe</button></a>
+                  </div>
+                 </div>
+              <div class="carousel-item">
+                <img style = "height: 27rem;" src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=2000&t=st=1693132599~exp=1693133199~hmac=a33006660be529f7e7811b54a33b67a2d81c84e07db599e0c2c193a7d0a8de81" class="d-block w-100" alt="pizza">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Pizza</h5>
+                    <a href="/website/recipe.html"><button>Recipe</button></a>
+                  </div> 
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <div class="recipe">
+        <h style="text-align: -webkit-center;
+        position: absolute;
+        left: 1%;
+        right: 1%;"> Add your recipe</h>
+    <form class="recipe-form">
+        <label for="recipe-name">Recipe Name:</label>
+        <input type="text" id="recipe-name" name="recipe-name" required>
+
+        
+
+        <label for="cooking-time">Cooking Time:</label>
+        <input type="text" id="cooking-time" name="cooking-time" required>
+
+        <label for="difficulty">Difficulty Level:</label>
+        <select id="difficulty" name="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <label for="dietary-tags">Dietary Tags:</label>
+        <input type="text" id="dietary-tags" name="dietary-tags">
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+        <label for="instructions">Step-by-Step Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="6" required></textarea>
+
+        <button class="preview-button" type="button">Preview Recipe</button>
+        
+    </form>
+
+    <div class="recipe-preview">
+        <h2>Recipe Preview</h2>
+        <h3 id="preview-name"></h3>
+        <img id="preview-image" src="" alt="">
+        <p>Cooking Time: <span id="preview-cooking-time"></span></p>
+        <p>Difficulty: <span id="preview-difficulty"></span></p>
+        <p>Dietary Tags: <span id="preview-dietary-tags"></span></p>
+        <h3>Ingredients</h3>
+        <ul id="preview-ingredients"></ul>
+        <h3>Instructions</h3>
+        <ol id="preview-instructions"></ol>
+    </div>
+
+    <button class="submit-recipe-button">Submit Recipe</button>
+</div>
+
+
+
+<section class="top-chefs">
+    <h2>Top Chefs</h2>
+    <div class="chef">
+        <img src="https://img.freepik.com/free-photo/image-cheerful-young-cook-uniform-standing-isolated-grey-wall_171337-5340.jpg?w=2000&t=st=1693134197~exp=1693134797~hmac=5298c3eb9120641b3bf3669f7971c21af87e206d38b63e7819083a3f3dace0bf"  alt="Chef 1">
+        <h3>Chef John Doe</h3>
+        <p>Specialty: Italian Cuisine</p>
+    </div>
+    <div class="chef">
+        <img src="https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg?w=2000&t=st=1693134224~exp=1693134824~hmac=40b7bfa324a7071cc7029a82ad1e64fa2d138dec9321d2216e319e1d7e7b0677"  alt="Chef 2">
+        <h3>Chef Jane Smith</h3>
+        <p>Specialty: French Pastry</p>
+    </div>
+    <a href="/website/chef.html" class="top-chef"><button>See more</button></a>
+</section>
+
+<!-- ... Rest of the HTML code ... -->
+
+    <footer>
+        <p>&copy; 2023 Recipe Sharing Platform</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Chef Rankings - Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="/website/chef.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <div class="page" style="display: flex;">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat with Our top Chef</h1>
+            <button id="end-chat-button">End Chat</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+        <div class="chat-input" style="width: 44rem;
+        display: flex;">
+            <textarea id="message-input" placeholder="Type your message..."></textarea>
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <div class="top-chefs-container">
+        <h1>Top Chef Rankings</h1>
+        <div style="display: flex;" class="chef">
+            <img style="height: 10rem" src="https://img.freepik.com/free-photo/image-cheerful-young-cook-uniform-standing-isolated-grey-wall_171337-5340.jpg?w=2000&t=st=1693134197~exp=1693134797~hmac=5298c3eb9120641b3bf3669f7971c21af87e206d38b63e7819083a3f3dace0bf" alt="Chef 1">
+            <div style="left: 72%; position: absolute;">
+            <h2>Chef Aryan Khanna</h2>
+            <p>Rating: 4.8</p>
+            <p>Specialty: Italian Cuisine</p>
+            </div>
+        </div>
+        <div class="chef">
+            <img style="height: 10rem" src="https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg?w=2000&t=st=1693134224~exp=1693134824~hmac=40b7bfa324a7071cc7029a82ad1e64fa2d138dec9321d2216e319e1d7e7b0677" alt="Chef 2">
+            <div style="left: 72%; position: absolute;">
+            <h2>Chef Sanjeev Rana</h2>
+            <p>Rating: 4.0</p>
+            <p>Specialty: Chinese Cuisine</p>
+        </div>
+</div>
+        <div class="chef">
+            <img style="height: 10rem" src="https://img.freepik.com/free-photo/happy-young-cook-uniform-holding-salad_171337-5343.jpg?w=2000&t=st=1693134252~exp=1693134852~hmac=76cf4e71835d9481d672fbd7f5fb221685c6b94d3abecc10874b401d2901c6cb" alt="Chef 1">
+            <div style="left: 72%; position: absolute;">
+            <h2>Chef Mohit Kapoor</h2>
+            <p>Rating: 4.1</p>
+            <p>Specialty: American Cuisine</p></div>
+        </div>
+        <div class="chef">
+            <img style="height: 10rem" src="https://img.freepik.com/free-photo/image-cheerful-young-cook-uniform-standing-isolated-grey-wall_171337-5340.jpg?w=2000&t=st=1693134197~exp=1693134797~hmac=5298c3eb9120641b3bf3669f7971c21af87e206d38b63e7819083a3f3dace0bf" alt="Chef 2">
+            <div style="left: 72%; position: absolute;">
+            <h2>Chef Aakash Gupta</h2>
+            <p>Rating: 4.2</p>
+            <p>Specialty: French Cuisine</p>
+        </div>
+</div>
+      
+ 
+    </div>
+
+    </div>
+ 
+   
+
+    <footer>
+        <p>&copy; 2023 Recipe Sharing Platform</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sendButton = document.getElementById("send-button");
+            const messageInput = document.getElementById("message-input");
+            const chatMessages = document.getElementById("chat-messages");
+            const endChatButton = document.getElementById("end-chat-button");
+    
+            // Simulate a simple chat with pre-defined messages
+            const chefName = "Chef John";
+            const userMessages = [
+                "Hello, Chef! I need a recipe for pasta.",
+                "What type of sauce should I use?",
+                "Great, thank you!"
+            ];
+            const chefMessages = [
+                "Hello! Sure, I can help with that.",
+                "For pasta, I recommend using a tomato-based sauce.",
+                "You're welcome! If you have any more questions, feel free to ask."
+            ];
+    
+            let messageIndex = 0;
+    
+            function addMessage(sender, message) {
+                const messageDiv = document.createElement("div");
+                messageDiv.classList.add("message", sender.toLowerCase());
+                messageDiv.textContent = `${sender}: ${message}`;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+    
+            function simulateChat() {
+                if (messageIndex < userMessages.length) {
+                    setTimeout(() => {
+                        addMessage("User", userMessages[messageIndex]);
+                        setTimeout(() => {
+                            addMessage(chefName, chefMessages[messageIndex]);
+                            messageIndex++;
+                            simulateChat(); // Continue with the next message
+                        }, 1000);
+                    }, messageIndex * 1500);
+                }
+            }
+    
+            sendButton.addEventListener("click", function () {
+                const userMessage = messageInput.value.trim();
+                if (userMessage !== "") {
+                    addMessage("User", userMessage);
+                    messageInput.value = "";
+                    setTimeout(() => {
+                        addMessage(chefName, "I'm currently unavailable to chat.");
+                    }, 1000);
+                }
+            });
+    
+            endChatButton.addEventListener("click", function () {
+                chatMessages.innerHTML = ""; // Clear chat messages
+                addMessage(chefName, "Chat ended.");
+                messageIndex = 0;
+            });
+    
+            simulateChat();
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,350 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Featured Recipes section */
+.featured-recipes {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-card {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.recipe-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.recipe-card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.view-recipe-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Submit Recipe button */
+.submit-recipe-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Add styles for the recipe submission form and preview section */
+.recipe-form {
+    padding: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recipe-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.recipe-form input,
+.recipe-form select,
+.recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.recipe-preview {
+    padding: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recipe-preview h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-preview img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recipe-preview p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.recipe-preview ul,
+.recipe-preview ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.submit-recipe-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Recipe Section */
+.recipe {
+    padding: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recipe h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.recipe-form input,
+.recipe-form select,
+.recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.recipe-preview h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-preview img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recipe-preview p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.recipe-preview ul,
+.recipe-preview ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Update the Submit Recipe button style */
+.submit-recipe-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Update the carousel style */
+.carousel-inner img {
+    height: 27rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption h5 {
+    margin: 0;
+}
+
+/* Update the recipe form and preview layout */
+
+.recipe {
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recipe h {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Top Chefs Section */
+.top-chefs {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.top-chefs h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.chef {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.chef img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.chef h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.chef p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.top-chef {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.top-chef button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
